@@ -11,7 +11,7 @@ const productos = [
     id: "TT002",
     nombre: "Torta Circular de Manjar",
     descripcion: "Torta tradicional chilena con manjar y nueces, un deleite para los amantes de los sabores dulces y clásicos.",
-    precio: "$42.000 CLP",
+    precio: 42000,
     imagen: "https://cdn0.recetasgratis.net/es/posts/8/0/2/torta_milhojas_24208_orig.jpg",
     categoria: "circular"
   },

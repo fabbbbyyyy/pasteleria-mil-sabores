@@ -10,6 +10,7 @@ import Recomendaciones from './pages/Recomendaciones';
 import Comunidad from './pages/Comunidad';
 import Carrito from './pages/Carrito';
 import { CarritoProvider } from './hooks/Carrito';
+import Historia from './pages/Historia';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/recomendaciones" element={<Recomendaciones />} />
         <Route path="/comunidad" element={<Comunidad />} />
         <Route path="/carrito" element={<Carrito />} />
+        <Route path="/historia" element={<Historia />} />
       </Routes>
       <Footer />
     </Router>
