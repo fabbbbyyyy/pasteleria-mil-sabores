@@ -11,7 +11,20 @@ const ProductoCard = ({ producto, onAgregarAlCarrito }) => {
   };
 
   const handleAgregar = () => {
-    onAgregarAlCarrito(producto.id, cantidad);
+    console.log('🖱️ Botón clickeado - Producto:', producto.nombre, 'Cantidad:', cantidad);
+    
+    // Verifica que onAgregarAlCarrito sea una función
+    if (typeof onAgregarAlCarrito === 'function') {
+      onAgregarAlCarrito(producto, cantidad);
+      
+      // Resetear cantidad después de agregar (opcional)
+      setCantidad(1);
+      
+      // Feedback visual (opcional)
+      alert(`✅ ${cantidad} ${producto.nombre} agregado al carrito!`);
+    } else {
+      console.error('❌ onAgregarAlCarrito no es una función:', onAgregarAlCarrito);
+    }
   };
 
   return (

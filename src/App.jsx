@@ -8,9 +8,12 @@ import ProductosPage from './pages/Productos';
 import Home from './pages/Home';
 import Recomendaciones from './pages/Recomendaciones';
 import Comunidad from './pages/Comunidad';
+import Carrito from './pages/Carrito';
+import { CarritoProvider } from './hooks/Carrito';
 
 function App() {
   return (
+    <CarritoProvider>
     <Router>
       <Header />
       <Navigation />
@@ -21,9 +24,11 @@ function App() {
         <Route path="/productos" element={<ProductosPage />} />
         <Route path="/recomendaciones" element={<Recomendaciones />} />
         <Route path="/comunidad" element={<Comunidad />} />
+        <Route path="/carrito" element={<Carrito />} />
       </Routes>
       <Footer />
     </Router>
+    </CarritoProvider>
   );
 }
 

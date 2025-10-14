@@ -1,7 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import ProductosGrid from '../components/ProductosGrid';
-import Footer from '../components/Footer';
 
 const ProductosPage = () => {
   const { categoria } = useParams();

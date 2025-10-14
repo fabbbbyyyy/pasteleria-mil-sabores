@@ -1,10 +1,12 @@
 import React from 'react';
 import productos from '../data/productos';
 import ProductoCard from '../components/ProductoCard';
+import { useCarrito } from '../hooks/Carrito';
 
 const Recomendaciones = () => {
   // Filtrar productos con precio menor a 30.000
   const productosRecomendados = productos.filter(producto => producto.precio < 30000);
+  const { addToCart } = useCarrito();
 
   return (
     <section id="centro">
@@ -19,6 +21,7 @@ const Recomendaciones = () => {
             <ProductoCard
               key={producto.id}
               producto={producto}
+              onAgregarAlCarrito={addToCart}
             />
           ))
         )}
