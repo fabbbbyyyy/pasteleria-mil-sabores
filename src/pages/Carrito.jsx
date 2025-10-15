@@ -51,8 +51,10 @@ const CarritoPage = () => {
   }
 
   return (
+
      <section id="carro">
         <h1>Carrito de Compras</h1>
+        <div className='cart-content'>
       <div className="cart-items">
           {cart.map(item => (
             <div key={item.id} className="item">
@@ -162,6 +164,7 @@ const CarritoPage = () => {
                 Seguir Comprando
               </Link>
             </div>
+          </div>
           </div>
         </div>
     </section>

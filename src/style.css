@@ -950,6 +950,15 @@ padding-right: 10rem;
   padding: 4rem;
   background-color: #F4E4E1;
   gap: 2rem;
+  padding-left: 12rem;
+  padding-right: 12rem;
+}
+.cart-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    margin-top: 2rem;
 }
 
 #carro h1 {
@@ -995,12 +1004,13 @@ padding-right: 10rem;
 }
 
 /* Items del Carrito */
+
 .cart-items {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem; /* Espacio entre los productos */
 }
+
 
 .item {
   display: grid;
@@ -1076,9 +1086,9 @@ padding-right: 10rem;
 
 /* Resumen del Carrito */
 .carrito-resumen {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 2rem;
+    width: 100%;
+    max-width: 400px;
+    justify-self: normal;
 }
 
 .resumen-card {
@@ -1261,7 +1271,10 @@ padding-right: 10rem;
    =============================== */
    
 /* Historia y Logros */
-
+.content{
+  padding-left: 9rem;
+  padding-right: 9rem;
+}
 #contenido {
     display: flex;
     flex-direction: column;
@@ -1520,11 +1533,10 @@ padding-right: 10rem;
 .timeline-content {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   background: #F8E8D8;
   border-radius: 20px;
-  padding: 2rem;
-  margin-top: 4rem;
+  padding: .75rem;
   box-shadow: 0 6px 20px rgba(139, 75, 59, 0.15);
   width: 45%;
 }

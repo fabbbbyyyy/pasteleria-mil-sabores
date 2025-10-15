@@ -4,7 +4,7 @@ export default function Historia() {
   return (
     <main>
     <section id="centro">
-      
+      <div className='content'>
         <div id="contenido">
             <h1>Nuestra Historia</h1>
             <div class="anniversary-badge">
@@ -230,6 +230,7 @@ export default function Historia() {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 </main>
