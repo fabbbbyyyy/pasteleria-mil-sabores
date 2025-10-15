@@ -34,7 +34,6 @@ export const CarritoProvider = ({ children }) => {
 
   // Agregar producto al carrito con cantidad específica
   const addToCart = (product, quantity = 1) => {
-    console.log('🛒 addToCart llamado con:', product, 'cantidad:', quantity);
     
     if (!product || !product.id) {
       console.error('Producto inválido:', product);
@@ -56,7 +55,6 @@ export const CarritoProvider = ({ children }) => {
           quantity: Math.min(newQuantity, 10)
         };
         
-        console.log('📦 Producto actualizado en carrito:', updatedCart[existingProductIndex]);
         return updatedCart;
       } else {
         // Si no existe, agregar nuevo producto
@@ -64,7 +62,6 @@ export const CarritoProvider = ({ children }) => {
           ...product, 
           quantity: quantityToAdd 
         }];
-        console.log('🆕 Producto agregado al carrito:', newCart[newCart.length - 1]);
         return newCart;
       }
     });
