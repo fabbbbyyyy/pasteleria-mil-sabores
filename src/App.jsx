@@ -11,6 +11,7 @@ import Comunidad from './pages/Comunidad';
 import Carrito from './pages/Carrito';
 import { CarritoProvider } from './hooks/Carrito';
 import Historia from './pages/Historia';
+import Perfil from './pages/Perfil';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/comunidad" element={<Comunidad />} />
         <Route path="/carrito" element={<Carrito />} />
         <Route path="/historia" element={<Historia />} />
+        <Route path="/perfil" element={<Perfil />} />        
       </Routes>
       <Footer />
     </Router>
