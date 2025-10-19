@@ -2,6 +2,7 @@
 
 *{
     margin: 0;
+    box-sizing: border-box;
 }
 
 html, body {
@@ -14,6 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 /* Estilos para el encabezado */
 header{
@@ -24,6 +26,7 @@ header{
     padding-right: 5%;
     padding-top: 1rem;
     padding-bottom: 1%;
+    flex-wrap: wrap;
 }
 
 h1{
@@ -42,6 +45,7 @@ h1{
     height: 125px;
     width: 125px;
 }
+
 #user>a{
     display: flex;
     flex-direction: column;
@@ -72,6 +76,12 @@ h1{
     align-items: center;
 }
 
+.Links>nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .Links>nav>a{
     text-decoration: none;
     color: #8B4B3B;
@@ -84,12 +94,14 @@ h1{
     color: #D4A574;
 }
 
+/* Botones de navegación */
 #buttons{
     display: flex;
     justify-content: flex-end;
     gap: 1rem;
     padding-right: 30px;
     background-color: #F4E4E1;
+    flex-wrap: wrap;
 }
 
 #buttons>a{
@@ -120,6 +132,7 @@ h1{
     justify-content: center;
     align-items: center;
     column-gap: 1rem;
+    flex-wrap: wrap;
 }
 
 button{
@@ -144,6 +157,8 @@ footer{
     padding-bottom: 2rem;
     font-family: "Pacifico", cursive !important;
     color: #8B4B3B;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 }
 
 #foot a {
@@ -190,6 +205,9 @@ footer{
     text-align: center;
     font-family: "Pacifico", cursive;
     transition: all 0.3s ease;
+    min-width: 250px;
+    max-width: 300px;
+    min-height: 300px;
 }
 
 .card:hover{
@@ -205,13 +223,12 @@ footer{
     text-decoration: none;
     color: #8B4B3B;
     padding: 1rem;
-    font-size: .9rem;
     font-size: 2rem;
 }
 
 .card>img{
   width: 100%;
-  height: 250px;
+  height: 200px;
   object-fit: cover;
   border-radius: 20px;
 }
@@ -1186,314 +1203,740 @@ padding-right: 10rem;
   background-color: #8B4B3B;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  #carro {
-    padding: 2rem;
-  }
+/* ===============================
+   ENHANCED RESPONSIVE DESIGN
+   =============================== */
 
-  .resumen-card {
-    min-width: 100%;
-    max-width: 100%;
+/* Larger desktops and beyond (min-width: 1400px) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+    margin: 0 auto;
   }
-
-  .carrito-resumen {
-    justify-content: center;
+  
+  .card {
+    max-width: 320px;
+  }
+  
+  .hero-image img {
+    height: 400px;
   }
 }
 
-@media (max-width: 768px) {
-  #carro h1 {
-    font-size: 2rem;
+/* Large desktops (max-width: 1399px) */
+@media (max-width: 1399px) {
+  .container {
+    max-width: 1140px;
+    margin: 0 auto;
   }
+  
+  #historia-logros {
+    gap: 2rem;
+  }
+  
+  .featured-student {
+    gap: 2rem;
+  }
+}
 
-  .item {
+/* Medium-sized desktops (max-width: 1199px) */
+@media (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    font-size: 2.7rem;
+  }
+  
+  .Links > nav > a {
+    font-size: 1.5rem;
+  }
+  
+  .home, .comunidad, .content {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  
+  #carro {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+  
+  .card {
+    width: 22vw;
+    height: 22vw;
+    min-height: 280px;
+  }
+  
+  .blog-grid, .recipes-grid, .testimonials-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+/* Small desktops and tablets (max-width: 991px) */
+@media (max-width: 991px) {
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    font-size: 2.3rem;
+  }
+  
+  header {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  
+  #logo {
+    height: 100px;
+    width: 100px;
+  }
+  
+  .Links > nav > a {
+    font-size: 1.4rem;
+    padding: 0.4rem;
+  }
+  
+  .home, .comunidad, .content {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  
+  #carro {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  
+  .card {
+    width: 28vw;
+    height: 28vw;
+    min-height: 250px;
+  }
+  
+  .card > a {
+    font-size: 1.7rem;
+  }
+  
+  .hero-image {
+    flex-direction: column;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    height: 250px;
+  }
+  
+  #historia-logros {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .historia-imagen img {
+    height: 250px;
+  }
+  
+  .mission-vision {
     grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .cart-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .carrito-resumen {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  .resumen-card {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+/* Tablets and large mobile (max-width: 767px) */
+@media (max-width: 767px) {
+  .container {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+  
+  header {
+    flex-direction: column;
+    padding: 1rem 3%;
     gap: 1rem;
   }
-
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  #logo {
+    height: 80px;
+    width: 80px;
+  }
+  
+  .Links {
+    width: 100%;
+  }
+  
+  .Links > nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+  
+  .Links > nav > a {
+    font-size: 1.3rem;
+    text-align: center;
+    padding: 0.3rem;
+  }
+  
+  #user {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  #user > a {
+    width: 100%;
+    align-items: center;
+  }
+  
+  #user > a > button {
+    width: 80%;
+    max-width: 300px;
+  }
+  
+  #buttons {
+    justify-content: center;
+    padding-right: 0;
+    padding: 1rem 0;
+  }
+  
+  #buttons > a > button {
+    width: 100%;
+  }
+  
+  /* Main content */
+  #centro {
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+  
+  /* Catalog */
+  .card {
+    width: 45vw;
+    height: 45vw;
+    min-height: 220px;
+  }
+  
+  .card > a {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+  
+  /* Products grid */
+  #productos-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .category-description {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  /* Home page */
+  .home, .comunidad, .content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .btn-cta {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .seccion-titulo {
+    font-size: 2rem;
+  }
+  
+  .servicios-grid, .testimonios-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  #cta-final {
+    padding: 2rem 1rem;
+  }
+  
+  /* Community */
+  .community-stats {
+    gap: 1rem;
+  }
+  
+  .featured-student {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Cart */
+  #carro {
+    padding: 2rem 1rem;
+  }
+  
+  .item {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
   .item .producto-imagen img {
     width: 100%;
-    height: 200px;
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto;
   }
-
+  
   .carrito-controls {
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
     width: 100%;
   }
-
-  .total-item {
-    font-size: 1.1rem !important;
+  
+  /* Footer */
+  #foot {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 3rem;
   }
+}
 
-  .resumen-card {
+/* Mobile devices (max-width: 575px) */
+@media (max-width: 575px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  #logo {
+    height: 70px;
+    width: 70px;
+  }
+  
+  .Links > nav > a {
+    font-size: 1.2rem;
+  }
+  
+  /* Catalog */
+  .card {
+    width: 80vw;
+    height: auto;
+    min-height: 200px;
+    padding: 0.8rem;
+  }
+  
+  .card > a {
+    font-size: 1.3rem;
+    padding: 0.3rem;
+  }
+  
+  .card > img {
+    height: 150px;
+  }
+  
+  /* Main content */
+  #centro {
+    padding: 1.5rem 0.8rem;
+    gap: 1rem;
+  }
+  
+  /* Products grid */
+  #productos-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    padding: 0.5rem;
+  }
+  
+  .producto-card {
+    padding: 1rem;
+  }
+  
+  .producto-imagen img {
+    height: 160px;
+  }
+  
+  .producto-info h3 {
+    font-size: 1.3rem;
+  }
+  
+  /* Home page */
+  .hero-image {
+    font-size: 18px;
+    margin: 0.5rem;
+  }
+  
+  .hero-image img {
+    height: 180px;
+  }
+  
+  .btn-cta {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .historia-contenido {
     padding: 1.5rem;
   }
-
+  
+  .historia-contenido h2 {
+    font-size: 1.5rem;
+  }
+  
+  .seccion-titulo {
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+  }
+  
+  /* Community */
+  .community-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stat-item {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  /* Cart */
+  .resumen-card {
+    padding: 1.5rem 1rem;
+  }
+  
   .resumen-card h3 {
     font-size: 1.5rem;
   }
-}
-
-@media (max-width: 480px) {
-  #carro {
+  
+  .btn-finalizar-compra,
+  .btn-vaciar-carrito,
+  .btn-seguir-comprando {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Timeline (Historia) */
+  .timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-year {
+    left: 20px;
+    transform: none;
+    width: auto;
+  }
+  
+  .timeline-content {
+    width: calc(100% - 40px);
+    margin-left: 40px !important;
+    margin-right: 0 !important;
+    flex-direction: column;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-content {
+    flex-direction: column;
+  }
+  
+  /* Perfil */
+  .perfil-info {
     padding: 1rem;
   }
-
-  .cantidad-selector {
-    flex-wrap: wrap;
+  
+  .perfil-actions {
+    flex-direction: column;
+    gap: 0.8rem;
   }
+  
+  .perfil-actions button {
+    width: 100%;
+  }
+}
 
+/* Extra small mobile devices (max-width: 375px) */
+@media (max-width: 375px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  #logo {
+    height: 60px;
+    width: 60px;
+  }
+  
+  .Links > nav > a {
+    font-size: 1.1rem;
+  }
+  
+  #user > a > button,
+  #buttons > a > button {
+    font-size: 0.8rem;
+  }
+  
+  /* Catalog */
+  .card {
+    min-height: 180px;
+  }
+  
+  .card > img {
+    height: 130px;
+  }
+  
+  .card > a {
+    font-size: 1.2rem;
+  }
+  
+  /* Products */
+  .producto-info h3 {
+    font-size: 1.2rem;
+  }
+  
+  .producto-descripcion {
+    font-size: 0.9rem;
+  }
+  
+  .producto-precio {
+    font-size: 1.1rem;
+  }
+  
   .cantidad-btn {
     width: 30px;
     height: 30px;
-    font-size: 1rem;
   }
-
-  .cantidad-input {
+  
+  .cantidad-selector input {
     width: 50px;
   }
-
-  .carrito-vacio {
-    padding: 2rem 1rem;
-    min-height: 300px;
+  
+  /* Cart */
+  .resumen-linea {
+    font-size: 0.9rem;
   }
+  
+  .resumen-total {
+    font-size: 1.1rem;
+  }
+  
+  .total-final {
+    font-size: 1.3rem !important;
+  }
+  
+  /* Home page */
+  .hero-image {
+    font-size: 16px;
+  }
+  
+  .hero-image img {
+    height: 150px;
+  }
+  
+  /* Footer */
+  #foot {
+    padding-top: 2rem;
+    font-size: 0.9rem;
+  }
+}
 
-  .carrito-vacio h2 {
-    font-size: 1.5rem;
+/* Fix for larger phone landscape mode */
+@media (max-height: 450px) and (orientation: landscape) {
+  header {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  #logo {
+    height: 60px;
+    width: 60px;
+  }
+  
+  .Links > nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .Links > nav > a {
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+  }
+  
+  #user {
+    flex-direction: row;
+  }
+  
+  .hero-image img {
+    height: 130px;
+  }
+  
+  #foot {
+    padding-top: 2rem;
+  }
+}
+
+/* Ensure good readability on very large screens */
+@media (min-width: 1800px) {
+  body {
+    font-size: 18px;
+  }
+  
+  .container {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  
+  .home, .comunidad, .content {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+  
+  #carro {
+    padding-left: 15rem;
+    padding-right: 15rem;
   }
 }
 
 /* ===============================
-   Historia
+   ESTILOS PÁGINA HISTORIA
    =============================== */
-   
-/* Historia y Logros */
-.content{
-  padding-left: 9rem;
-  padding-right: 9rem;
+
+.content {
+  padding-left: 8rem;
+  padding-right: 8rem;
 }
+
 #contenido {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: justify;
-    padding: 1rem;
-    max-width: 1600px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(139, 75, 59, 0.15);
-    background-color: #F8E8D8;
-    border: 1px solid #E8D5C4;
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #F8E8D8 0%, #F4E4E1 100%);
+  border-radius: 25px;
+  box-shadow: 0 8px 30px rgba(139, 75, 59, 0.15);
+  margin-bottom: 3rem;
 }
-#contenido>p {
-    font-family: "Lato", sans-serif;
-    color: #6B453C;
-    text-align: center;
+
+#contenido h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 3.5rem;
+  color: #8B4B3B;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(139, 75, 59, 0.1);
 }
+
+/* Badge de Aniversario */
 .anniversary-badge {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin: 2rem 0;
-    padding: 1.5rem;
-    background: linear-gradient(135deg, #D4A574, #A67C6A);
-    border-radius: 20px;
-    box-shadow: 0 6px 20px rgba(139, 75, 59, 0.2);
-}
-.anniversary-number {
-    font-size: 4rem;
-    font-weight: bold;
-    color: #F8E8D8;
-    font-family: "Pacifico", cursive;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-.anniversary-text {
-    font-size: 1.5rem;
-    color: #F8E8D8;
-    font-family: "Pacifico", cursive;
-    text-align: center;
-}
-
-#historia-logros {
-    display: flex;
-    gap: 3rem;
-    margin: 4rem 0;
-    align-items: center;
-}
-
-.historia-imagen {
-    flex: 1;
-}
-
-.historia-imagen img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-.historia-contenido {
-    flex: 1;
-    padding: 2rem;
-    background-color: #F8E8D8;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(139, 75, 59, 0.15);
-}
-
-.historia-contenido h2 {
-    font-family: "Pacifico", cursive;
-    color: #8B4B3B;
-    margin-bottom: 1rem;
-}
-
-.historia-contenido p {
-    font-family: "Lato", sans-serif;
-    color: #6B453C;
-    line-height: 1.6;
-}
-
-/* Títulos de sección */
-.seccion-titulo {
-    text-align: center;
-    font-family: 'Pacifico', cursive;
-    color: #8B4B3B;
-    font-size: 2.5rem;
-    margin: 3rem 0;
-}
-
-/* Servicios */
-#servicios {
-    margin: 4rem 0;
-}
-
-.servicios-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.servicio-card {
-    background-color: #F8E8D8;
-    padding: 2rem;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(139, 75, 59, 0.15);
-}
-
-.servicio-card svg {
-    margin-bottom: 1rem;
-}
-
-.servicio-card h3 {
-    font-family: 'Pacifico', cursive;
-    color: #8B4B3B;
-    margin-bottom: 1rem;
-}
-
-.servicio-card p {
-    font-family: 'Lato', sans-serif;
-    color: #6B453C;
-}
-
-/* Testimonios */
-#testimonios {
-    margin: 4rem 0;
-    background-color: #F8E8D8;
-    padding: 3rem;
-    border-radius: 15px;
-}
-
-.testimonios-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.testimonio-card {
-    background-color: #F4E4E1;
-    padding: 1.5rem;
-    border-radius: 10px;
-    border-left: 4px solid #A67C6A;
-}
-
-.testimonio-card p {
-    font-family: 'Lato', sans-serif;
-    color: #6B453C;
-    font-style: italic;
-    margin-bottom: 1rem;
-}
-
-.testimonio-card strong {
-    color: #8B4B3B;
-}
-
-/* Call to Action Final */
-#cta-final {
-    text-align: center;
-    margin: 4rem 0;
-    padding: 3rem;
-    background: linear-gradient(45deg, #A67C6A, #8B4B3B);
-    border-radius: 15px;
-    color: #F8E8D8;
-}
-
-#cta-final h2 {
-    font-family: 'Pacifico', cursive;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-#cta-final p {
-    font-family: 'Lato', sans-serif;
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-.btn-final {
-    background-color: #F8E8D8;
-    color: #8B4B3B;
-    padding: 1rem 3rem;
-    border-radius: 30px;
-    text-decoration: none;
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.btn-final:hover {
-    background-color: #F0D8C8;
-    transform: translateY(-2px);
-}
-#historia-logros {
-  flex-wrap: wrap;
-}
-/* Secciones de Historia */
-.history-section {
-  margin: 3rem 0;
-  padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.4);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #D4A574, #A67C6A);
+  padding: 1.5rem 3rem;
   border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(139, 75, 59, 0.1);
+  box-shadow: 0 6px 20px rgba(139, 75, 59, 0.3);
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.anniversary-badge::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: rotate(45deg);
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+.anniversary-number {
+  font-family: "Pacifico", cursive;
+  font-size: 4rem;
+  color: #F8E8D8;
+  font-weight: bold;
+  line-height: 1;
+  text-shadow: 2px 2px 4px rgba(74, 59, 50, 0.3);
+}
+
+.anniversary-text {
+  font-family: "Lato", sans-serif;
+  font-size: 1.3rem;
+  color: #F8E8D8;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#contenido > p {
+  font-family: "Lato", sans-serif;
+  color: #6B453C;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Sección de Historia */
+.history-section {
+  margin: 4rem 0;
+  padding: 3rem 2rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 25px;
+  box-shadow: 0 4px 20px rgba(139, 75, 59, 0.1);
 }
 
 .history-section h2 {
   font-family: "Pacifico", cursive;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   color: #8B4B3B;
   text-align: center;
   margin-bottom: 3rem;
+  position: relative;
+  padding-bottom: 1rem;
 }
 
-/* Línea de Tiempo */
+.history-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, transparent, #D4A574, transparent);
+  border-radius: 2px;
+}
+
+/* Timeline */
 .timeline {
   position: relative;
-  max-width: 1000px;
-  margin: 0 auto;
   padding: 2rem 0;
 }
 
@@ -1501,110 +1944,128 @@ padding-right: 10rem;
   content: '';
   position: absolute;
   left: 50%;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background: linear-gradient(to bottom, #A67C6A, #D4A574);
   transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #D4A574, #A67C6A);
+  border-radius: 2px;
 }
 
 .timeline-item {
   position: relative;
-  margin: 3rem 0;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: flex-end;
   width: 100%;
+}
+
+.timeline-item.reverse {
+  justify-content: flex-start;
 }
 
 .timeline-year {
   position: absolute;
   left: 50%;
-  top: 20px;
   transform: translateX(-50%);
-  background: #8B4B3B;
+  background: linear-gradient(135deg, #8B4B3B, #6B3A2A);
   color: #F8E8D8;
-  padding: 1rem 1.5rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 25px;
   font-family: "Pacifico", cursive;
-  font-size: 1.2rem;
-  font-weight: bold;
-  z-index: 2;
+  font-size: 1.5rem;
   box-shadow: 0 4px 15px rgba(139, 75, 59, 0.3);
+  z-index: 2;
+  top: 20px;
+  min-width: 120px;
+  text-align: center;
 }
 
 .timeline-content {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  background: #F8E8D8;
-  border-radius: 20px;
-  padding: .75rem;
-  box-shadow: 0 6px 20px rgba(139, 75, 59, 0.15);
   width: 45%;
+  background-color: #F8E8D8;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 6px 25px rgba(139, 75, 59, 0.15);
+  border: 2px solid #E8D5C4;
+  margin-top: 80px;
+  transition: all 0.3s ease;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
 }
 
-.timeline-item:nth-child(odd) .timeline-content {
-  margin-left: 0;
+.timeline-item:hover .timeline-content {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 35px rgba(139, 75, 59, 0.25);
 }
 
-.timeline-item:nth-child(even) .timeline-content {
+.timeline-item.reverse .timeline-content {
   margin-left: 55%;
   flex-direction: row-reverse;
 }
 
 .timeline-image {
   flex-shrink: 0;
+  width: 200px;
 }
 
 .timeline-image img {
-  width: 250px;
-  height: 180px;
+  width: 100%;
+  height: 150px;
   object-fit: cover;
   border-radius: 15px;
+  border: 3px solid #D4A574;
   box-shadow: 0 4px 15px rgba(139, 75, 59, 0.2);
 }
 
 .timeline-text {
   flex: 1;
+  text-align: left;
 }
 
 .timeline-text h3 {
   font-family: "Pacifico", cursive;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: #8B4B3B;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .timeline-text p {
+  font-family: "Lato", sans-serif;
   color: #6B453C;
-  line-height: 1.6;
-  text-align: justify;
+  line-height: 1.7;
+  font-size: 1rem;
 }
 
 /* Misión y Visión */
 .mission-vision {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
   margin-top: 2rem;
 }
 
 .mission-card,
 .vision-card {
-  background: #F8E8D8;
+  background: linear-gradient(135deg, #F8E8D8, #F4E4E1);
   padding: 2.5rem;
   border-radius: 20px;
+  box-shadow: 0 6px 25px rgba(139, 75, 59, 0.15);
+  border: 2px solid #E8D5C4;
   text-align: center;
-  box-shadow: 0 6px 20px rgba(139, 75, 59, 0.15);
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .mission-card:hover,
 .vision-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 35px rgba(139, 75, 59, 0.25);
 }
 
 .mv-icon {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  display: block;
 }
 
 .mission-card h3,
@@ -1612,53 +2073,59 @@ padding-right: 10rem;
   font-family: "Pacifico", cursive;
   font-size: 2rem;
   color: #8B4B3B;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .mission-card p,
 .vision-card p {
+  font-family: "Lato", sans-serif;
   color: #6B453C;
-  line-height: 1.6;
-  font-size: 1.1rem;
-  text-align: justify;
+  line-height: 1.7;
+  font-size: 1.05rem;
 }
 
 /* Grid de Valores */
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
 
 .value-card {
-  background: #F8E8D8;
+  background-color: #F8E8D8;
   padding: 2rem;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 6px 20px rgba(139, 75, 59, 0.15);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(139, 75, 59, 0.12);
+  border: 2px solid #E8D5C4;
+  transition: all 0.3s ease;
 }
 
 .value-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(139, 75, 59, 0.2);
+  border-color: #D4A574;
 }
 
 .value-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
+  display: block;
 }
 
 .value-card h4 {
   font-family: "Pacifico", cursive;
   font-size: 1.5rem;
   color: #8B4B3B;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .value-card p {
+  font-family: "Lato", sans-serif;
   color: #6B453C;
-  line-height: 1.5;
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 /* Grid de Logros */
@@ -1670,37 +2137,38 @@ padding-right: 10rem;
 }
 
 .achievement-card {
-  background: #F8E8D8;
+  background: linear-gradient(135deg, #F8E8D8, #F4E4E1);
   padding: 2rem;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 6px 20px rgba(139, 75, 59, 0.15);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 20px rgba(139, 75, 59, 0.12);
+  border: 2px solid #E8D5C4;
+  transition: all 0.3s ease;
 }
 
 .achievement-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(139, 75, 59, 0.2);
 }
 
 .achievement-number {
   font-size: 3rem;
-  font-weight: bold;
-  color: #8B4B3B;
-  font-family: "Pacifico", cursive;
-  display: block;
   margin-bottom: 1rem;
+  display: block;
 }
 
 .achievement-card h4 {
   font-family: "Pacifico", cursive;
   font-size: 1.3rem;
   color: #8B4B3B;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 
 .achievement-card p {
+  font-family: "Lato", sans-serif;
   color: #6B453C;
-  font-size: 0.9rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 /* Sección de Fundadores */
@@ -1713,17 +2181,19 @@ padding-right: 10rem;
 
 .founder-card {
   display: flex;
-  align-items: center;
-  gap: 3rem;
-  background: #F8E8D8;
+  gap: 2rem;
+  background: linear-gradient(135deg, #F8E8D8, #F4E4E1);
   padding: 2.5rem;
-  border-radius: 20px;
-  box-shadow: 0 6px 20px rgba(139, 75, 59, 0.15);
-  transition: transform 0.3s ease;
+  border-radius: 25px;
+  box-shadow: 0 6px 25px rgba(139, 75, 59, 0.15);
+  border: 2px solid #E8D5C4;
+  align-items: center;
+  transition: all 0.3s ease;
 }
 
 .founder-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 35px rgba(139, 75, 59, 0.25);
 }
 
 .founder-card:nth-child(even) {
@@ -1739,12 +2209,13 @@ padding-right: 10rem;
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #A67C6A;
-  box-shadow: 0 4px 15px rgba(139, 75, 59, 0.2);
+  border: 4px solid #D4A574;
+  box-shadow: 0 6px 20px rgba(139, 75, 59, 0.2);
 }
 
 .founder-info {
   flex: 1;
+  text-align: left;
 }
 
 .founder-info h3 {
@@ -1755,6 +2226,7 @@ padding-right: 10rem;
 }
 
 .founder-title {
+  font-family: "Lato", sans-serif;
   color: #A67C6A;
   font-weight: bold;
   font-size: 1.1rem;
@@ -1762,52 +2234,93 @@ padding-right: 10rem;
 }
 
 .founder-bio {
+  font-family: "Lato", sans-serif;
   color: #6B453C;
-  line-height: 1.6;
+  line-height: 1.7;
+  font-size: 1.05rem;
   font-style: italic;
-  font-size: 1.1rem;
   margin-bottom: 1rem;
+  padding-left: 1rem;
+  border-left: 3px solid #D4A574;
 }
 
 .founder-years {
-  color: #A67C6A;
-  font-size: 0.9rem;
+  font-family: "Lato", sans-serif;
+  color: #8B4B3B;
   font-weight: bold;
+  font-size: 0.95rem;
 }
 
-/* Responsive Design para Historia */
-@media (max-width: 1024px) {
-  .timeline::before {
-    left: 30px;
+/* ===============================
+   RESPONSIVE DESIGN - HISTORIA
+   =============================== */
+
+/* Large desktops (max-width: 1399px) */
+@media (max-width: 1399px) {
+  .content {
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
   
-  .timeline-year {
-    left: 30px;
-    transform: translateX(-50%);
+  #contenido h1 {
+    font-size: 3.2rem;
   }
   
   .timeline-content {
-    width: calc(100% - 80px);
-    margin-left: 80px !important;
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .timeline-item:nth-child(even) .timeline-content {
-    flex-direction: column;
-  }
-  
-  .timeline-image img {
-    width: 100%;
-    max-width: 300px;
-    height: 200px;
+    width: 46%;
   }
 }
 
-@media (max-width: 768px) {
+/* Medium desktops (max-width: 1199px) */
+@media (max-width: 1199px) {
+  .content {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  
+  #contenido h1 {
+    font-size: 2.8rem;
+  }
+  
+  .anniversary-number {
+    font-size: 3.5rem;
+  }
+  
+  .history-section h2 {
+    font-size: 2.5rem;
+  }
+  
+  .timeline-image {
+    width: 150px;
+  }
+  
+  .timeline-image img {
+    height: 120px;
+  }
+  
+  .founder-photo img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Small desktops and tablets (max-width: 991px) */
+@media (max-width: 991px) {
+  .content {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  
+  #contenido {
+    padding: 2rem 1.5rem;
+  }
+  
+  #contenido h1 {
+    font-size: 2.5rem;
+  }
+  
   .anniversary-badge {
-    flex-direction: column;
-    text-align: center;
+    padding: 1.2rem 2rem;
   }
   
   .anniversary-number {
@@ -1815,53 +2328,272 @@ padding-right: 10rem;
   }
   
   .anniversary-text {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   
   .history-section {
-    padding: 1.5rem;
-    margin: 2rem 0;
+    padding: 2rem 1.5rem;
   }
   
   .history-section h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
+  }
+  
+  .timeline-content {
+    width: 48%;
+  }
+  
+  .timeline-image {
+    width: 130px;
+  }
+  
+  .timeline-image img {
+    height: 100px;
+  }
+  
+  .timeline-text h3 {
+    font-size: 1.4rem;
+  }
+  
+  .timeline-text p {
+    font-size: 0.95rem;
   }
   
   .mission-vision {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
   }
   
+  .values-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .founder-card {
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+  
+  .founder-photo img {
+    width: 130px;
+    height: 130px;
+  }
+  
+  .founder-info h3 {
+    font-size: 1.7rem;
+  }
+}
+
+/* Tablets (max-width: 767px) */
+@media (max-width: 767px) {
+  .content {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  #contenido {
+    padding: 1.5rem 1rem;
+  }
+  
+  #contenido h1 {
+    font-size: 2rem;
+  }
+  
+  #contenido > p {
+    font-size: 1rem;
+  }
+  
+  .anniversary-badge {
+    padding: 1rem 1.5rem;
+  }
+  
+  .anniversary-number {
+    font-size: 2.5rem;
+  }
+  
+  .anniversary-text {
+    font-size: 1rem;
+  }
+  
+  .history-section {
+    margin: 2rem 0;
+    padding: 1.5rem 1rem;
+  }
+  
+  .history-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Timeline en modo móvil */
+  .timeline::before {
+    left: 30px;
+  }
+  
+  .timeline-item,
+  .timeline-item.reverse {
+    justify-content: flex-start;
+  }
+  
+  .timeline-year {
+    left: 30px;
+    transform: none;
+    font-size: 1.2rem;
+    padding: 0.6rem 1rem;
+    min-width: 100px;
+  }
+  
+  .timeline-content {
+    width: calc(100% - 80px);
+    margin-left: 80px !important;
+    margin-right: 0 !important;
+    padding: 1.5rem;
+    flex-direction: column;
+  }
+  
+  .timeline-item.reverse .timeline-content {
+    flex-direction: column;
+  }
+  
+  .timeline-image {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  
+  .timeline-image img {
+    height: 150px;
+    width: 100%;
+  }
+  
+  .timeline-text {
+    text-align: center;
+  }
+  
+  .timeline-text h3 {
+    font-size: 1.3rem;
+  }
+  
+  .timeline-text p {
+    font-size: 0.9rem;
+  }
+  
+  /* Misión y Visión */
+  .mission-vision {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .mission-card,
+  .vision-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .mission-card h3,
+  .vision-card h3 {
+    font-size: 1.7rem;
+  }
+  
+  .mission-card p,
+  .vision-card p {
+    font-size: 1rem;
+  }
+  
+  /* Valores */
   .values-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
   
+  .value-card {
+    padding: 1.5rem;
+  }
+  
+  /* Logros */
   .achievements-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
   }
   
+  .achievement-card {
+    padding: 1.5rem;
+  }
+  
+  .achievement-card h4 {
+    font-size: 1.2rem;
+  }
+  
+  /* Fundadores */
   .founder-card {
-    flex-direction: column;
+    flex-direction: column !important;
     text-align: center;
-    padding: 2rem;
-  }
-  
-  .founder-card:nth-child(even) {
-    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
   }
   
   .founder-photo img {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
+  }
+  
+  .founder-info {
+    text-align: center;
   }
   
   .founder-info h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
   
-  .timeline {
-    padding: 1rem 0;
+  .founder-title {
+    font-size: 1rem;
+  }
+  
+  .founder-bio {
+    font-size: 1rem;
+    border-left: none;
+    border-top: 3px solid #D4A574;
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+}
+
+/* Mobile devices (max-width: 575px) */
+@media (max-width: 575px) {
+  .content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  #contenido {
+    padding: 1.2rem 0.8rem;
+  }
+  
+  #contenido h1 {
+    font-size: 1.7rem;
+  }
+  
+  #contenido > p {
+    font-size: 0.95rem;
+  }
+  
+  .anniversary-badge {
+    padding: 0.8rem 1.2rem;
+  }
+  
+  .anniversary-number {
+    font-size: 2.2rem;
+  }
+  
+  .anniversary-text {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+  
+  .history-section {
+    padding: 1.2rem 0.8rem;
+  }
+  
+  .history-section h2 {
+    font-size: 1.6rem;
   }
   
   .timeline::before {
@@ -1870,181 +2602,138 @@ padding-right: 10rem;
   
   .timeline-year {
     left: 20px;
-    font-size: 1rem;
-    padding: 0.8rem 1.2rem;
+    font-size: 1.1rem;
+    padding: 0.5rem 0.8rem;
+    min-width: 90px;
   }
   
   .timeline-content {
     width: calc(100% - 60px);
     margin-left: 60px !important;
-    padding: 1.5rem;
+    padding: 1.2rem;
   }
   
   .timeline-image img {
-    height: 150px;
+    height: 130px;
   }
   
   .timeline-text h3 {
-    font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .achievement-card {
-    padding: 1.5rem;
+    font-size: 1.2rem;
   }
   
-  .achievement-number {
-    font-size: 2.5rem;
+  .timeline-text p {
+    font-size: 0.85rem;
   }
   
-  .value-card {
-    padding: 1.5rem;
+  .mv-icon {
+    font-size: 3rem;
+  }
+  
+  .mission-card h3,
+  .vision-card h3 {
+    font-size: 1.5rem;
+  }
+  
+  .mission-card p,
+  .vision-card p {
+    font-size: 0.95rem;
   }
   
   .value-icon {
     font-size: 2.5rem;
   }
   
-  .mission-card,
-  .vision-card {
-    padding: 2rem;
+  .value-card h4 {
+    font-size: 1.3rem;
   }
   
-  .mv-icon {
+  .value-card p {
+    font-size: 0.9rem;
+  }
+  
+  .achievement-number {
     font-size: 2.5rem;
   }
   
-  .founders-section {
-    gap: 2rem;
+  .achievement-card h4 {
+    font-size: 1.1rem;
+  }
+  
+  .achievement-card p {
+    font-size: 0.85rem;
+  }
+  
+  .founder-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .founder-photo img {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .founder-info h3 {
+    font-size: 1.4rem;
+  }
+  
+  .founder-title {
+    font-size: 0.95rem;
+  }
+  
+  .founder-bio {
+    font-size: 0.95rem;
+  }
+  
+  .founder-years {
+    font-size: 0.85rem;
   }
 }
 
-/* ===============================
-   Perfil de Usuario
-   =============================== */
-#perfil {
-  flex: 1;
-  padding: 3rem 5%;
-  background: #F4E4E1;
-  font-family: "Lato", sans-serif;
-  color: #8B4B3B;
-  text-align: center;
-}
-
-#perfil h1 {
-  font-family: "Pacifico", cursive;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-.perfil-info {
-  background: #F8E8D8;
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  max-width: 500px;
-  margin: 0 auto 2rem;
-  text-align: left;
-  line-height: 1.8rem;
-}
-
-.perfil-info p {
-  margin: .5rem 0;
-  font-size: 1rem;
-}
-
-.perfil-actions {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.perfil-actions button {
-  background: #8B4B3B;
-  color: #F8E8D8;
-  padding: .7rem 1.5rem;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-family: "Lato", sans-serif;
-  border: none;
-  transition: background .3s;
-}
-
-.perfil-actions button:hover {
-  background: #4A3B32;
-}
-
-/* Estilos para los campos del formulario */
-.perfil-info input,
-.perfil-info select {
-  width: 100%;
-  padding: 0.5rem;
-  border: 2px solid #8B4B3B;
-  border-radius: 8px;
-  background: #FFF;
-  color: #8B4B3B;
-  font-family: "Lato", sans-serif;
-  font-size: 1rem;
-  margin-top: 0.25rem;
-  box-sizing: border-box;
-}
-
-.perfil-info input:focus,
-.perfil-info select:focus {
-  outline: none;
-  border-color: #4A3B32;
-  box-shadow: 0 0 5px rgba(139, 75, 59, 0.3);
-}
-
-.perfil-info strong {
-  display: block;
-  margin-bottom: 0.25rem;
-  color: #8B4B3B;
-}
-
-.perfil-actions {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.perfil-actions button {
-  background: #8B4B3B;
-  color: #F8E8D8;
-  padding: .7rem 1.5rem;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-family: "Lato", sans-serif;
-  border: none;
-  transition: background .3s;
-}
-
-.perfil-actions button:hover {
-  background: #4A3B32;
-}
-
-.registro-actions{
-  display: flex;
-  align-items: center;
-  margin-top: 1rem;
-  justify-content: center;
-  line-height: 1.8rem;
-}
-
-a{
-  color: #4A3B32
-
+/* Extra small mobile (max-width: 375px) */
+@media (max-width: 375px) {
+  #contenido h1 {
+    font-size: 1.5rem;
+  }
   
-}
-/* ===============================
-    errores
-   =============================== */
-   .error {
-  display: block;
-  color: red;
-  font-size: 0.9rem;
-  margin-top: 4px;
+  .anniversary-number {
+    font-size: 2rem;
+  }
+  
+  .anniversary-text {
+    font-size: 0.85rem;
+  }
+  
+  .history-section h2 {
+    font-size: 1.4rem;
+  }
+  
+  .timeline-year {
+    font-size: 1rem;
+    padding: 0.4rem 0.6rem;
+  }
+  
+  .timeline-text h3 {
+    font-size: 1.1rem;
+  }
+  
+  .timeline-text p {
+    font-size: 0.8rem;
+  }
+  
+  .mission-card h3,
+  .vision-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .value-card h4 {
+    font-size: 1.2rem;
+  }
+  
+  .founder-info h3 {
+    font-size: 1.3rem;
+  }
+  
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
 }
