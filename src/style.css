@@ -2048,3 +2048,650 @@ a{
   font-size: 0.9rem;
   margin-top: 4px;
 }
+
+/* ===============================
+   RESPONSIVE DESIGN - MOBILE FIRST
+   =============================== */
+
+/* Tablets and small desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  /* Header */
+  header {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  #logo {
+    height: 100px;
+    width: 100px;
+  }
+  
+  .Links > nav > a {
+    font-size: 1.5rem;
+    padding: 0.3rem;
+  }
+  
+  /* Home sections */
+  .home {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  
+  .comunidad {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  
+  .content {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  
+  /* Cart */
+  #carro {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  
+  .cart-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .carrito-resumen {
+    max-width: 100%;
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Typography */
+  h1 {
+    font-size: 2rem;
+  }
+  
+  /* Header */
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 3%;
+  }
+  
+  #logo {
+    height: 80px;
+    width: 80px;
+  }
+  
+  .Links {
+    width: 100%;
+  }
+  
+  .Links > nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .Links > nav > a {
+    font-size: 1.3rem;
+  }
+  
+  #user {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  #buttons {
+    flex-direction: column;
+    padding-right: 0;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  /* Main content */
+  #centro {
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+  
+  /* Catalog */
+  #catalogo {
+    gap: 1.5rem;
+  }
+  
+  .card {
+    width: 45vw;
+    height: 45vw;
+  }
+  
+  .card > a {
+    font-size: 1.5rem;
+  }
+  
+  .card > img {
+    height: 180px;
+  }
+  
+  /* Products grid */
+  #productos-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0.5rem;
+  }
+  
+  .category-description {
+    padding-left: 1rem;
+    font-size: 1rem;
+  }
+  
+  .producto-card {
+    padding: 1rem;
+  }
+  
+  .producto-imagen img {
+    height: 180px;
+  }
+  
+  /* Home page */
+  .home {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  .hero-image {
+    flex-direction: column;
+    font-size: 20px;
+  }
+  
+  .hero-image img {
+    height: 200px;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .btn-cta {
+    padding: 0.8rem 1.5rem;
+  }
+  
+  #historia-logros {
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .historia-imagen img {
+    height: 200px;
+  }
+  
+  .seccion-titulo {
+    font-size: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .servicios-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  #testimonios {
+    padding: 2rem 1rem;
+  }
+  
+  .testimonios-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  #cta-final {
+    padding: 2rem 1rem;
+    margin: 2rem 0;
+  }
+  
+  #cta-final h2 {
+    font-size: 2rem;
+  }
+  
+  #cta-final p {
+    font-size: 1rem;
+  }
+  
+  .btn-final {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+  
+  /* Community sections */
+  .comunidad {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .community-stats {
+    gap: 1rem;
+  }
+  
+  .stat-item {
+    min-width: 120px;
+    padding: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .community-section {
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  .community-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .recipes-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .support-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .featured-student {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  
+  .student-photo {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .student-info-detailed h3 {
+    font-size: 1.5rem;
+  }
+  
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  /* Content/History */
+  .content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  #contenido {
+    padding: 1.5rem;
+  }
+  
+  .anniversary-number {
+    font-size: 3rem;
+  }
+  
+  .anniversary-text {
+    font-size: 1.2rem;
+  }
+  
+  /* Cart */
+  #carro {
+    padding: 2rem 1rem;
+  }
+  
+  .cart-content {
+    gap: 1.5rem;
+  }
+  
+  /* Footer */
+  #foot {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 3rem;
+    text-align: center;
+  }
+  
+  /* Profile */
+  #perfil {
+    padding: 2rem 3%;
+  }
+  
+  #perfil h1 {
+    font-size: 2rem;
+  }
+  
+  .perfil-info {
+    padding: 1.5rem;
+  }
+  
+  .perfil-actions {
+    flex-direction: column;
+  }
+  
+  .perfil-actions button {
+    width: 100%;
+  }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Typography */
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  /* Header */
+  header {
+    padding: 0.5rem 2%;
+  }
+  
+  #logo {
+    height: 60px;
+    width: 60px;
+  }
+  
+  .Links > nav > a {
+    font-size: 1.1rem;
+  }
+  
+  #user > a > button {
+    width: 80px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+  
+  #buttons > a > button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Main content */
+  #centro {
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+  }
+  
+  /* Catalog */
+  .card {
+    width: 90vw;
+    height: auto;
+    min-height: 280px;
+  }
+  
+  .card > a {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+  
+  .card > img {
+    height: 150px;
+  }
+  
+  /* Products */
+  .category-description {
+    padding-left: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .producto-card {
+    padding: 0.8rem;
+  }
+  
+  .producto-info h3 {
+    font-size: 1.2rem;
+  }
+  
+  .producto-descripcion {
+    font-size: 0.9rem;
+  }
+  
+  .producto-precio {
+    font-size: 1.1rem;
+  }
+  
+  .btn-agregar {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Home */
+  .home {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .hero-image {
+    font-size: 16px;
+    margin: 0.5rem;
+  }
+  
+  .hero-image img {
+    height: 150px;
+  }
+  
+  .cta-buttons {
+    gap: 0.8rem;
+  }
+  
+  .btn-cta {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .historia-imagen img {
+    height: 150px;
+  }
+  
+  .historia-contenido {
+    padding: 1.5rem;
+  }
+  
+  .historia-contenido h2 {
+    font-size: 1.5rem;
+  }
+  
+  .seccion-titulo {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .servicio-card {
+    padding: 1.5rem;
+  }
+  
+  .servicio-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  #testimonios {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  .testimonio-card {
+    padding: 1rem;
+  }
+  
+  #cta-final {
+    padding: 1.5rem 0.5rem;
+  }
+  
+  #cta-final h2 {
+    font-size: 1.5rem;
+  }
+  
+  #cta-final p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-final {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Community */
+  .comunidad {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .stat-item {
+    min-width: 100px;
+    padding: 0.8rem;
+  }
+  
+  .stat-number {
+    font-size: 1.8rem;
+  }
+  
+  .stat-label {
+    font-size: 0.8rem;
+  }
+  
+  .community-section {
+    padding: 1rem;
+    margin: 1.5rem 0;
+  }
+  
+  .community-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .blog-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .blog-content {
+    padding: 1rem;
+  }
+  
+  .recipes-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .recipe-content {
+    padding: 1rem;
+  }
+  
+  .recipe-content h4 {
+    font-size: 1.1rem;
+  }
+  
+  .support-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .support-item {
+    padding: 1.5rem;
+  }
+  
+  .support-icon {
+    font-size: 2.5rem;
+  }
+  
+  .support-item h3 {
+    font-size: 1.2rem;
+  }
+  
+  .featured-student {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .student-photo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .student-info-detailed h3 {
+    font-size: 1.3rem;
+  }
+  
+  .student-quote {
+    font-size: 1rem;
+  }
+  
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+  
+  /* Content/History */
+  .content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  #contenido {
+    padding: 1rem;
+  }
+  
+  .anniversary-badge {
+    padding: 1rem;
+    flex-direction: column;
+  }
+  
+  .anniversary-number {
+    font-size: 2.5rem;
+  }
+  
+  .anniversary-text {
+    font-size: 1rem;
+  }
+  
+  /* Footer */
+  #foot {
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Profile */
+  #perfil {
+    padding: 1.5rem 2%;
+  }
+  
+  #perfil h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .perfil-info {
+    padding: 1rem;
+    line-height: 1.5rem;
+  }
+  
+  .perfil-info p {
+    font-size: 0.9rem;
+  }
+  
+  .perfil-actions button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
