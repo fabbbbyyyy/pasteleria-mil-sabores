@@ -12,6 +12,8 @@ import Carrito from './pages/Carrito';
 import { CarritoProvider } from './hooks/Carrito';
 import Historia from './pages/Historia';
 import Perfil from './pages/Perfil';
+import Registro from './pages/registro';
+import Login from './pages/login';
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
         <Route path="/carrito" element={<Carrito />} />
         <Route path="/historia" element={<Historia />} />
         <Route path="/perfil" element={<Perfil />} />        
+        <Route path="/registro" element={<Registro />} />        
+        <Route path="/login" element={<Login />} />        
       </Routes>
       <Footer />
     </Router>

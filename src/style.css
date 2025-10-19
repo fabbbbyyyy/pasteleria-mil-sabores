@@ -2026,8 +2026,19 @@ padding-right: 10rem;
   background: #4A3B32;
 }
 
+.registro-actions{
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  justify-content: center;
+  line-height: 1.8rem;
+}
 
+a{
+  color: #4A3B32
 
+  
+}
 /* ===============================
     errores
    =============================== */

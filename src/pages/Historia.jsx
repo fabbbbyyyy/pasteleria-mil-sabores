@@ -24,7 +24,7 @@ export default function Historia() {
                     <div class="timeline-year">1975</div>
                     <div class="timeline-content">
                         <div class="timeline-image">
-                            <img src="https://static.emol.cl/emol50/Fotos/2016/03/04/file_20160304120057.jpg" alt="Fundación 1975"/>
+                            <img src="/BNC_Chile-Augusto_Pinochet_y_su_señora_Lucía_Hiriart_Rodríguez.jpg" alt="Fundación 1975"/>
                         </div>
                         <div class="timeline-text">
                             <h3>Los Humildes Comienzos</h3>
@@ -39,7 +39,7 @@ export default function Historia() {
                     <div class="timeline-year">1982</div>
                     <div class="timeline-content">
                         <div class="timeline-image">
-                            <img src="https://es.habcdn.com/photos/project/medium/fachada-cafeteria-pasteleria-la-dolce-vita-1811727.jpg" alt="Expansión 1982"/>
+                            <img src="/lanona.png" alt="Expansión 1982"/>
                         </div>
                         <div class="timeline-text">
                             <h3>La Primera Expansión</h3>
@@ -52,7 +52,7 @@ export default function Historia() {
                     <div class="timeline-year">1995</div>
                     <div class="timeline-content">
                         <div class="timeline-image">
-                            <img src="https://vallecalchaqui.com/download/multimedia.normal.9d19948cb2522a2e.3120416c66616a6f7220325f6e6f726d616c2e6a7067.jpg" alt="Récord Guinness 1995"/>
+                            <img src="/unnamed.jpg" alt="Récord Guinness 1995"/>
                         </div>
                         <div class="timeline-text">
                             <h3>🏆 El Récord Guinness</h3>
@@ -209,7 +209,7 @@ export default function Historia() {
             <div class="founders-section">
                 <div class="founder-card">
                     <div class="founder-photo">
-                        <img src="https://pbs.twimg.com/profile_images/702634005334790144/oT_Klqy9_400x400.jpg"  alt="Don Eduardo Morales"/>
+                        <img src="/pichono.png"  alt="Don Eduardo Morales"/>
                     </div>
                     <div class="founder-info">
                         <h3>Don Eduardo Morales</h3>
