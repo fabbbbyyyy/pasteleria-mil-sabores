@@ -30,6 +30,7 @@ const CarritoPage = () => {
 
   if (cart.length === 0) {
     return (
+     <section id="centro">
     <section id="carro">
         <div className="carrito-vacio">
           <div className="carrito-vacio-icono">
@@ -46,6 +47,7 @@ const CarritoPage = () => {
             Seguir Comprando
           </Link>
         </div>
+      </section>
       </section>
     );
   }

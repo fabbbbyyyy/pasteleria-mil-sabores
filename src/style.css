@@ -2737,3 +2737,128 @@ padding-right: 10rem;
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ===============================
+   Perfil de Usuario
+   =============================== */
+#perfil {
+  flex: 1;
+  padding: 3rem 5%;
+  background: #F4E4E1;
+  font-family: "Lato", sans-serif;
+  color: #8B4B3B;
+  text-align: center;
+}
+
+#perfil h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.perfil-info {
+  background: #F8E8D8;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  text-align: left;
+  line-height: 1.8rem;
+}
+
+.perfil-info p {
+  margin: .5rem 0;
+  font-size: 1rem;
+}
+
+.perfil-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.perfil-actions button {
+  background: #8B4B3B;
+  color: #F8E8D8;
+  padding: .7rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+  border: none;
+  transition: background .3s;
+}
+
+.perfil-actions button:hover {
+  background: #4A3B32;
+}
+
+/* Estilos para los campos del formulario */
+.perfil-info input,
+.perfil-info select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid #8B4B3B;
+  border-radius: 8px;
+  background: #FFF;
+  color: #8B4B3B;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+  box-sizing: border-box;
+}
+
+.perfil-info input:focus,
+.perfil-info select:focus {
+  outline: none;
+  border-color: #4A3B32;
+  box-shadow: 0 0 5px rgba(139, 75, 59, 0.3);
+}
+
+.perfil-info strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: #8B4B3B;
+}
+
+.perfil-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.perfil-actions button {
+  background: #8B4B3B;
+  color: #F8E8D8;
+  padding: .7rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+  border: none;
+  transition: background .3s;
+}
+
+.perfil-actions button:hover {
+  background: #4A3B32;
+}
+
+.registro-actions{
+  margin-top: 1rem;
+}
+
+.registro-actions{
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  justify-content: center;
+  line-height: 1.8rem;
+}
+
+a{
+  color: #4A3B32
+
+  
+}
